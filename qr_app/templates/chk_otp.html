@@ -1,0 +1,97 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en"> 
+
+ <head> 
+
+  <meta charset="UTF-8"> 
+
+  <title>Spark QR</title> 
+
+  <link rel="stylesheet" href="{% static "css/signin.css" %}"> 
+
+ </head> 
+
+ <body> <!-- partial:index.partial.html --> 
+
+  <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+
+   <div class="signin"> 
+
+    <div class="content"> 
+
+     <h2>Check OTP</h2> 
+{% comment %}
+     {% if messages %} {% for i in  messages %}
+        <h3 style="color: red;">{{i}}</h3>
+        {% endfor %}
+        {% endif %}
+
+      <form action="{% url 'chk_otp' %}" method="post">
+        {% csrf_token %}
+
+
+     <div class="form"> 
+
+      <div class="inputBox"> 
+
+       <input type="text" name="username" required> <i>Enter OTP</i> 
+
+      </div> 
+
+       <div class="inputBox"> 
+
+       <input type="password" name="password" required> <i>Password</i> 
+
+      </div> 
+
+      <div class="links"> <a href="forgetpass">Forgot Password?</a> <a href="{% url 'signup' %}">Signup</a> 
+
+      </div>  
+
+      <div class="inputBox"> 
+
+       <a href=""><input type="submit" value="Check"></a>
+
+      </div> 
+    </form> {% endcomment %}
+    <form action="{% url 'otp_vrify' %}" method="post">
+        {% csrf_token %}
+
+         
+         <div class="form"> 
+          {% if messages %}{% for i in messages %}
+         <h4 style="color: red;">{{i}}</h4>
+          {% endfor %}{% endif %}
+             
+             <div class="inputBox"> 
+
+                 <input name='ottp' type="text" required> <i>Enter your OTP</i> <br><br>
+                 <input name='email' type="email" required> <i>Enter your email</i> <br><br>
+
+
+                
+                </div> 
+                
+                <div class="inputBox"> 
+                    
+                    <input type="submit" value="Submit"> 
+                    
+                </div> 
+                
+            </div> 
+            
+    </form>
+
+     </div> 
+
+    </div> 
+
+   </div> 
+
+  </section> <!-- partial --> 
+
+ </body>
+
+</html>

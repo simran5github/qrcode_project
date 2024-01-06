@@ -1,0 +1,675 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Spark QR</title>
+
+  <!-- slider stylesheet -->
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static "css/style.css" %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static "css/responsive.css" %}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="{% url 'index' %}">
+            <span>
+              Spark QR
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'genqr' %}"> Generate QR </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'about' %}"> About </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'do' %}"> What we do </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'signin' %}"
+                  style="color: black; border: 7px solid white; padding: 10px; background-color: white; border-radius: 20px; margin: 10px;"
+                  >Sign in</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'signup' %}"
+                  style="color: black; border: 6px solid white; padding: 10px; background-color: white; border-radius: 20px; margin: 10px;"
+                  >Sign up</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="portfolio.html"> Portfolio </a>
+                </li> -->
+              </ul>
+              <!-- <div class="user_option">
+                <a href="">
+                  {% comment %} <img src="{% static "images/user.png" %}" alt=""> {% endcomment %}
+                </a>
+              </div> -->
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col">
+                  <div class="detail-box">
+                    <div>
+                      <h2>
+                        welcome to
+
+                      </h2>
+                      <h1>
+                        Spark QR 
+                      </h1>
+                      <p>
+                        Elevate your digital presence with ease—create, customize, and share unique QR codes seamlessly on our user-friendly platform.
+                      </p>
+                      <div class="">
+                        <a href="{% url 'contact' %}">
+                          Contact us
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col">
+                  <div class="detail-box">
+                    <div>
+                      <h2>
+                        welcome to
+
+                      </h2>
+                      <h1>
+                        Spark QR
+                      </h1>
+                      <p>
+                        Transform information into interactive experiences—craft your custom QR codes effortlessly on our intuitive platform.
+                      </p>
+                      <div class="">
+                        <a href="">
+                          Contact us
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col">
+                  <div class="detail-box">
+                    <div>
+                      <h2>
+                        welcome to
+
+                      </h2>
+                      <h1>
+                        Spark QR
+                      </h1>
+                      <p>
+                        Turn your ideas into scannable moments with our intuitive QR Code Generator—empowering you to share and connect effortlessly.
+                      </p>
+                      <div class="">
+                        <a href="">
+                          Contact us
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- do section -->
+
+  <section class="do_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          What we do
+        </h2>
+        <p>
+          We blend innovation and simplicity, offering a seamless platform to create personalized QR codes. From dynamic content to vibrant designs, we empower you to effortlessly generate codes that tell your unique story. Explore a world where connectivity meets creativity, and discover the endless possibilities of our intuitive QR code solutions.
+        </p>
+      </div>
+      <div class="do_container">
+        <div class="box arrow-start arrow_bg">
+          <div class="img-box">
+            <!-- <img src="images/d-1.png" alt=""> -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHk-c8cIub6ZvlA078s0ehRxW7wAFQOziFvg&usqp=CAU" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              Customization
+            </h6>
+          </div>
+        </div>
+        <div class="box arrow-middle arrow_bg">
+          <div class="img-box">
+            <!-- <img src="images/d-2.png" alt=""> -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6rgTRjjTSgxXi4fPwK4UILj2blSyaly0oFg&usqp=CAU" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              Download
+            </h6>
+          </div>
+        </div>
+        <div class="box arrow-middle arrow_bg">
+          <div class="img-box">
+            <!-- <img src="images/d-3.png" alt=""> -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc0J0RCPs6kE4Q5KkRcNa9lL3kiNZIzfsVQg&usqp=CAU" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              Dynamic QR Codes
+            </h6>
+          </div>
+        </div>
+        <div class="box arrow-end arrow_bg">
+          <div class="img-box">
+            <!-- <img src="images/d-4.png" alt=""> -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTc32_RXHS3Drlv0fiLFHT3xxxOx7sgSiWDA&usqp=CAU" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              Password Protection
+            </h6>
+          </div>
+        </div>
+        <div class="box ">
+          <div class="img-box">
+            <!-- <img src="images/d-5.png" alt=""> -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmUryCO5td7Pnhx-ZBfEq4Abym2p7rcC43pQ&usqp=CAU" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              Documentation
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end do section -->
+
+  <!-- who section -->
+
+  <section class="who_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="img-box">
+            <img src="{% static "images/who-img.jpg" %}" alt="">
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                WHO ARE WE?
+              </h2>
+            </div>
+            <p>
+              Welcome to Spark QR, where simplicity meets innovation. We are a team passionate about making QR code generation easy and accessible for everyone. Our user-friendly platform empowers you to create custom QR codes with just a few clicks. Join us in simplifying the way you share information and explore the endless possibilities of QR technology.
+            </p>
+            <div>
+              <a href="{% url 'do' %}">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end who section -->
+
+
+  <!-- work section -->
+  <section class="work_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          CREATIVE WORKS
+        </h2>
+        <p>
+          Unleash your imagination with our QR code generator! Beyond the basics, explore the endless possibilities of creative QR codes. Add colors to make your codes uniquely yours. 
+        </p>
+      </div>
+      <div class="work_container layout_padding2">
+        <div class="box b-1">
+          <img src="{% static "images/w-1.png" %}" alt="">
+        </div>
+        <div class="box b-2">
+          <img src="{% static "images/w-2.png" %}" alt="">
+
+        </div>
+        <div class="box b-3">
+          <img src="{% static "images/w-3.png" %}" alt="">
+
+        </div>
+        <div class="box b-4">
+          <img src="{% static "images/w-4.png" %}" alt="">
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end work section -->
+
+  <!-- client section -->
+  <section class="client_section">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          WHAT CUSTOMERS SAY
+        </h2>
+      </div>
+      <div class="carousel-wrap ">
+        <div class="owl-carousel">
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="{% static "images/c-1.png" %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Jackson Artisan <br>
+                  <span>
+                    Aspiring artist
+                  </span>
+                </h5>
+                <img src="{% static "images/quote.png" %}" alt="">
+                <p>
+                  As an avid user of Spark QR, I can't help but appreciate the seamless experience it offers. Creating QR codes has never been easier — the intuitive interface and customization options make it a breeze. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="{% static "images/c-2.png" %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Jessica Influencer <br>
+                  <span>
+                    Social media influencer 
+                  </span>
+                </h5>
+                <img src="{% static "images/quote.png" %}" alt="">
+                <p>
+                  Navigating the world of QR codes has never been more enjoyable. Pixel Pioneer has become my trusted companion for effortlessly crafting QR codes that stand out. The customization options are a game-changer, allowing me to infuse personality into each code I create.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="{% static "images/c-3.png" %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Alex TechPro <br>
+                  <span>
+                    IT professional
+                  </span>
+                </h5>
+                <img src="{% static "images/quote.png" %}" alt="">
+                <p>
+                  Being part of Spark QR community has redefined my approach to QR codes. The sheer user-friendliness and flexibility offered here are exceptional.Whether it's for events, marketing, or simply sharing exciting content, this platform has become my reliable go-to.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
+
+  <!-- target section -->
+  <!-- <section class="target_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="detail-box">
+            <h2>
+              1000+
+            </h2>
+            <h5>
+              Years of Business -->
+            <!-- </h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="detail-box">
+            <h2>
+              20000+
+            </h2> -->
+            <!-- <h5>
+              Projects Delivered
+            </h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="detail-box">
+            <h2>
+              10000+
+            </h2>
+            <h5> -->
+              <!-- Satisfied Customers
+            </h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="detail-box">
+            <h2>
+              1500+
+            </h2>
+            <h5>
+              Cups of Coffee
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- end target section -->
+
+
+  <!-- contact section -->
+
+  <section class="contact_section layout_padding">
+    <div class="container">
+
+      <div class="heading_container">
+        <h2>
+          Contact Us
+        </h2>
+      </div>
+      <div class="">
+        <div class="">
+          <div class="row">
+            <div class="col-md-9 mx-auto">
+              <div class="contact-form">
+                <form action="">
+                  <div>
+                    <input type="text" placeholder="Full Name ">
+                  </div>
+                  <div>
+                    <input type="text" placeholder="Phone Number">
+                  </div>
+                  <div>
+                    <input type="email" placeholder="Email Address">
+                  </div>
+                  <div>
+                    <input type="text" placeholder="Message" class="input_message">
+                  </div>
+                  <div>
+                    <input type="text" placeholder="Reviews (Optional)" class="input_message">
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn_on-hover">
+                      Send
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map_img-box">
+        <img src="{% static "images/map-img.png" %}" alt="">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- end contact section -->
+
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_contact">
+            <h5>
+              Get to know us
+            </h5>
+            <div>
+              <!-- <div class="img-box">
+                <img src="images/location-white.png" width="18px" alt="">
+              </div>
+              <p>
+                Address
+              </p> -->
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="{% static "images/telephone-white.png" %}" width="12px" alt="">
+              </div>
+              <p>
+                +91 9432657890
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="{% static "images/envelope-white.png" %}" width="18px" alt="">
+              </div>
+              <p>
+                lunawork04@gmail.com
+              </p>
+            </div>
+            <div>
+              <p>
+                <a href="{% url 'termsofuse' %}" style="color: white; text-decoration: none;">Terms of use</a>
+              </p>
+            </div>
+            <div>
+              <p>
+                <a href="{% url 'privacy' %}" style="color: white; text-decoration: none;">Privacy</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <h5>
+              Informations
+            </h5>
+            <p>
+              Explore our Information section to stay updated on the latest QR code trends, tips, and innovative ways to leverage this powerful technology. Empower your QR code journey with insights and knowledge at your fingertips!
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="info_insta">
+            <h5>
+              Instagram
+            </h5>
+            <div class="insta_container">
+              <div>
+                <a href="">
+                  <div class="insta-box b-1">
+                    <img src="{% static "images/insta.png" %}" alt="">
+                  </div>
+                </a>
+                <a href="">
+                  <div class="insta-box b-2">
+                    <img src="{% static "images/insta.png" %}" alt="">
+                  </div>
+                </a>
+              </div>
+
+              <!-- <div>
+                <a href="">
+                  <div class="insta-box b-3">
+                    <img src="images/insta.png" alt="">
+                  </div>
+                </a>
+                <a href="">
+                  <div class="insta-box b-4">
+                    <img src="images/insta.png" alt="">
+                  </div>
+                </a>
+              </div> -->
+              <!-- <div>
+                <a href="">
+                  <div class="insta-box b-3">
+                    <img src="images/insta.png" alt="">
+                  </div>
+                </a>
+                <a href="">
+                  <div class="insta-box b-4">
+                    <img src="images/insta.png" alt="">
+                  </div>
+                </a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_form ">
+            <h5>
+              Newsletter
+            </h5>
+            <form action="">
+              <input type="email" placeholder="Enter your email">
+              <button>
+                Subscribe
+              </button>
+            </form>
+            <div class="social_box">
+              <a href="">
+                <img src="{% static "images/fb.png" %}" alt="">
+              </a>
+              <a href="">
+                <img src="{% static "images/twitter.png" %}" alt="">
+              </a>
+              <a href="">
+                <img src="{% static "images/linkedin.png" %}" alt="">
+              </a>
+              <a href="">
+                <img src="{% static "images/youtube.png" %}" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2020 All Rights Reserved By
+      <a href="">lunaworks</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{% static "js/jquery-3.4.1.min.js" %}"></script>
+  <script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- owl carousel script 
+    -->
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 0,
+      navText: [],
+      center: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  </script>
+  <!-- end owl carousel script -->
+
+</body>
+
+</html>

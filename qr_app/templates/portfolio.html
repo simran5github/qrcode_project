@@ -1,0 +1,376 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Spark QR</title>
+
+  <!-- slider stylesheet -->
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static "css/style.css" %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static "css/responsive.css" %}" rel="stylesheet" />      
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="{% url 'index' %}">
+            <span>
+              Spark QR
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'regindex' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'reggenqr' %}"> Generate QR  
+                     </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'regabout' %}"> About </a> 
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'regdo' %}"> What we do </a> 
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'regcontact' %}">Contact us</a> 
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'portfolio' %}"
+                  style="color: black; border: 7px solid white; padding: 10px; background-color: white; border-radius: 20px; margin: 10px;"
+                  >{{myname}}</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'logout' %}"
+                  style="color: black; border: 6px solid white; padding: 10px; background-color: white; border-radius: 20px; margin: 10px;"
+                  >Logout here</a>
+                </li>
+              </ul>
+              {% comment %} <div class="user_option">
+                <h6 style="color: blue;">
+                  {{myname}}
+                </h6>
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+              </div> {% endcomment %}
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+
+  <!-- work section -->
+  <section class="work_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <section class="client_section">
+          <div class="container">
+            <div class="heading_container">
+              <h2>
+                Explore your QR code collection here
+              </h2>
+            </div>
+            <!-- 
+            <div class="carousel-wrap ">
+              <div class="owl-carousel"> -->
+
+                <!-- <div class="item">
+                  <div class="box">
+                    <div class="img-box">
+                      {% comment %} <img src="{% static "images/c-1.png" %}" alt=""> {% endcomment %}
+                    </div>
+                    {% if user %}
+                    <div class="detail-box">
+                      <h5>
+                        Date <br>
+                        <span>
+                          time
+                        </span>
+                      </h5>                      
+                      <p>
+                        QRcode 1 
+                      </p>
+                      <img src="{{user.code}}" alt="" srcset="">
+                    </div>
+                    {% endif %}
+                  </div>
+                </div> -->
+                
+                <!-- <div class="item">
+                  <div class="box">
+                    <div class="img-box">
+                      {% comment %} <img src="{% static "images/c-2.png" %}" alt=""> {% endcomment %}
+                    </div>
+                    {% for i in  oks %}
+                    <div class="detail-box">                
+                      <p>
+                        <img src="{{i.code.url}}" alt="" height="40%" srcset="">
+                        <h5>
+                          Date Time 
+                          <br>
+                        </h5>
+                        <h3>{{i.dob}}</h3>
+                      </p>
+                    </div>
+                    {% endfor %}
+                  </div> -->
+                <!-- </div> -->
+
+                
+                <!-- <div class="item">
+                  <div class="box">
+                    <div class="img-box">
+                      {% comment %} <img src="{% static "images/c-3.png" %}" alt=""> {% endcomment %}
+                    </div>
+                    <div class="detail-box">
+                      <h5>
+                        Date <br>
+                        <span>
+                          Time
+                        </span>
+                      </h5>
+                      {% comment %} <img src="{% static "images/quote.png" %}" alt=""> {% endcomment %}
+                      <p>
+                        QRcode 3
+                      </p>
+                    </div>
+                  </div>
+                </div> -->
+
+              <!-- </div>
+            </div> -->
+            <div class="container-fluid">
+              <div class="row">
+                {% for i in oks %}
+                <div class="col-lg-4"  style="margin-top: 10px;">
+                  <div class="card" style="width: 200px;">
+                  <img class="card-img-top" style="align-items: center;" src="{{i.code.url}}" alt="Reload image"></div>
+                  <div class="card-body">
+                   <p class="card-text">Date Time</p> 
+                    <a href="" class="btn btn-dark">{{i.dob}}</a> 
+                    <a href="{% url 'delete' i.id %}"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAR9JREFUSEvtlk0OAUEQhT9xAFdwADYu4OcCFiwJRyMsWbiAnwvYiL0rOIAwJS2ZYXqqOiPGYnpZXa9ev+o3PVWhoFUpiBcrcRXoA03wYu7ACdgAN02QhVhytkBHK+b2d0BPy7UQN5wSrVZ8XzDnLICFWJSKClndSPneU9Ca94T/DXEdmL4pktjExebR/sWjWMubxbHviuPtCrlTS27imv6GOH5yMVE7MtQh4FN64VVslrlUcEZ/VWwosRhPTCQGE7PISot9nTitoDWWaFCoYitJqfjDh2WrtQekNJd0yNqFXN9xYS+X5ffn60IuxT8hXkVD3sDK5MlbA8O0vawHZAQschKPgWUoseS33DBQCzzA1Q0QRx/OMmUGctrSCyN+ANSkiR9dx0jKAAAAAElFTkSuQmCC"/></a>
+
+                  </div>
+                </div>
+             
+                {% endfor %}
+              </div>
+            </div>
+            
+            
+              
+
+          </div>
+        </section>
+      
+      </div>
+    </div>
+  </section>
+
+  <!-- end work section --> 
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_contact">
+            <h5>
+              Get to know us
+            </h5>
+            <div>
+              <!-- <div class="img-box">
+                <img src="images/location-white.png" width="18px" alt="">
+              </div>
+              <p>
+                Address
+              </p> -->
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="{% static "images/telephone-white.png" %}" width="12px" alt="">
+              </div>
+              <p>
+                +91 9432657890
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="{% static "images/envelope-white.png" %}" width="18px" alt="">
+              </div>
+              <p>
+                lunawork04@gmail.com
+              </p>
+            </div>
+            <div>
+              <p>
+                <a href="{% url 'regtermsofuse' %}" style="color: white; text-decoration: none;">Terms of use</a>
+              </p>
+            </div>
+            <div>
+              <p>
+                <a href="{% url 'regprivacy' %}" style="color: white; text-decoration: none;">Privacy</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <h5>
+              Informations
+            </h5>
+            <p>
+              Explore our Information section to stay updated on the latest QR code trends, tips, and innovative ways to leverage this powerful technology. Empower your QR code journey with insights and knowledge at your fingertips!
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="info_insta">
+            <h5>
+              Instagram
+            </h5>
+            <div class="insta_container">
+              <div>
+                <a href="">
+                  <div class="insta-box b-1">
+                    <img src="{% static "images/insta.png" %}" alt="">
+                  </div>
+                </a>
+                <a href="">
+                  <div class="insta-box b-2">
+                    <img src="{% static "images/insta.png" %}" alt="">
+                  </div>
+                </a>
+              </div>
+
+              <!-- <div>
+                <a href="">
+                  <div class="insta-box b-3">
+                    <img src="images/insta.png" alt="">
+                  </div>
+                </a>
+                <a href="">
+                  <div class="insta-box b-4">
+                    <img src="images/insta.png" alt="">
+                  </div>
+                </a>
+              </div> -->
+              <!-- <div>
+                <a href="">
+                  <div class="insta-box b-3">
+                    <img src="images/insta.png" alt="">
+                  </div>
+                </a>
+                <a href="">
+                  <div class="insta-box b-4">
+                    <img src="images/insta.png" alt="">
+                  </div>
+                </a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_form ">
+            <h5>
+              Newsletter
+            </h5>
+            <form action="">
+              <input type="email" placeholder="Enter your email">
+              <button>
+                Subscribe
+              </button>
+            </form>
+            <div class="social_box">
+              <a href="">
+                <img src="{% static "images/fb.png" %}" alt="">
+              </a>
+              <a href="">
+                <img src="{% static "images/twitter.png" %}" alt="">
+              </a>
+              <a href="">
+                <img src="{% static "images/linkedin.png" %}" alt="">
+              </a>
+              <a href="">
+                <img src="{% static "images/youtube.png" %}" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2020 All Rights Reserved By
+      <a href="">lunaworks</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{% static "js/jquery-3.4.1.min.js" %}"></script>
+  <script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- owl carousel script 
+    -->
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 0,
+      navText: [],
+      center: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  </script>
+  <!-- end owl carousel script -->
+
+</body>
+
+</html>
